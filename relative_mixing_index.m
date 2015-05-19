@@ -8,8 +8,8 @@ n =19; % number of images to be analyzed
 
 for jj = 1:1:n
   while jj ~= 1
-  load matrix_rel_mixing_index; % loads matrix_rel_mixing_index.mat
-  break
+    load matrix_rel_mixing_index; % loads matrix_rel_mixing_index.mat
+    break
   end
 
   eval(['image_input = imread(''D:\research\thesis\mixing index\correct images\nikon\bright\' num2str(jj) '.tif'');']) % loads images from destination folder
@@ -26,8 +26,8 @@ for jj = 1:1:n
     for j = 1:columns
       standard_deviation_not(1,j) = (sum((line_divisions(:,j)-((mean_I(1,j)))).^2))^0.5;
     end
-  standard_deviation_not = mean(standard_deviation_not); % computes original std. deviation
-  break
+    standard_deviation_not = mean(standard_deviation_not); % computes original std. deviation
+    break
   end
 
   for j =1:columns
