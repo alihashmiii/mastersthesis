@@ -22,6 +22,7 @@ for jj = 1:1:n
   [rows columns extraneous]= size(cropped_gray_image); % extracts information regarding number of pixels in the cropped image
   line_divisions = double(cropped_gray_image(1:rows,1:columns)); % converts the type of 'cropped_grayscale_image' to double
   mean_I = mean(line_divisions(:,:)); % computes mean pixel intensities in the selected area
+  
   while jj ==1
     for j = 1:columns
       standard_deviation_not(1,j) = (sum((line_divisions(:,j)-((mean_I(1,j)))).^2))^0.5;
